@@ -424,6 +424,31 @@ hl.window_rule({
     float = true,
 })
 
+-- Custom window rules
+hl.window_rule({
+    name  = "fix-freecad-popups",
+    match = {
+        class      = "FreeCAD",
+        float      = true,
+        fullscreen = false,
+        pin        = false,
+    },
+
+    no_initial_focus = true,
+})
+
+hl.window_rule({
+    name  = "fix-musescore-popups",
+    match = {
+        class      = "MuseScore4",
+        float      = true,
+        fullscreen = false,
+        pin        = false,
+    },
+
+    no_initial_focus = true,
+})
+
 -- Custom monitor workspace assignments
 hl.workspace_rule({ workspace = "1", monitor = "DP-1" })
 hl.workspace_rule({ workspace = "2", monitor = "DP-1" })
