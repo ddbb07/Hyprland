@@ -68,6 +68,23 @@ local menu        = "hyprlauncher"
 --   hl.exec_cmd("waybar & hyprpaper & firefox")
 -- end)
 
+hl.on("hyprland.start", function()
+    -- Services --
+    hl.exec_cmd("arch-audit-gtk")
+    hl.exec_cmd("mako")
+    hl.exec_cmd("systemctl --user start hyprpolkitagent")
+    hl.exec_cmd("waybar")
+
+    -- Programs --
+    hl.exec_cmd("gtk-launch com.github.wwmm.easyeffects")
+    hl.exec_cmd("gtk-launch com.heroicgameslauncher.hgl")
+    hl.exec_cmd("gtk-launch com.nextcloud.desktopclient.nextcloud")
+    hl.exec_cmd("gtk-launch org.mozilla.Thunderbird")
+    hl.exec_cmd("gtk-launch org.nicotine_plus.Nicotine")
+    hl.exec_cmd("gtk-launch org.qbittorrent.qBittorrent")
+    hl.exec_cmd("gtk-launch steam")
+    hl.exec_cmd("gtk-launch vesktop")
+end)
 
 -------------------------------
 ---- ENVIRONMENT VARIABLES ----
